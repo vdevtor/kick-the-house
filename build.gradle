@@ -24,7 +24,7 @@ task clean(type: Delete) {
 }
 
 ext{
-    // Engage App Versions
+    // App Versions
     major_version = 0
     minor_version = 1
     patch_version = 0
