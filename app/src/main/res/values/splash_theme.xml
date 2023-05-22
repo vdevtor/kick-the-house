@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MySplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white_color</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/app_logo_round</item>
+        <item name="postSplashScreenTheme">@style/Theme.KickTheHouse</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="result_win">Win</string>
+    <string name="result_draw">Draw</string>
+    <string name="result_lose">Lose</string>
+</resources>

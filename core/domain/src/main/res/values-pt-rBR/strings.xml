@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="result_win">Vitória</string>
+    <string name="result_draw">Empate</string>
+    <string name="result_lose">Derrota</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomInputField">
+        <attr name="input_title" format="string"/>
+        <attr name="alternative_input_title" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomSwitchButton">
+        <attr name="first_option_title" format="string"/>
+        <attr name="second_option_title" format="string"/>
+    </declare-styleable>
+</resources>

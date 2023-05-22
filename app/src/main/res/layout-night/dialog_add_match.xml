@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/add_new_team"
+        android:textSize="@dimen/text_size_sixteen"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white_color" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@color/light_ice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+    <com.vitorthemyth.components.CustomSingleInputField
+        android:id="@+id/opponentName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <TextView
+        android:id="@+id/tvImportance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_smallest"
+        android:layout_marginTop="@dimen/margin_default"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_fourteen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/opponentName"
+        app:layout_constraintTop_toBottomOf="@id/opponentName"
+        tools:text="Some title here" />
+
+    <Spinner
+        android:id="@+id/importance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:background="@drawable/spinner_background_dark"
+        android:divider="@null"
+        android:popupBackground="@drawable/spinner_background_dark"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@id/dificult"
+        app:layout_constraintStart_toStartOf="@id/opponentName"
+        app:layout_constraintTop_toBottomOf="@id/tvImportance"
+        tools:listitem="@layout/item_spinner_text" />
+
+
+    <TextView
+        android:id="@+id/tvDifficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_smallest"
+        android:layout_marginTop="@dimen/margin_default"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_fourteen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dificult"
+        app:layout_constraintTop_toBottomOf="@id/opponentName"
+        tools:text="Some title here" />
+
+
+    <Spinner
+        android:id="@+id/dificult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:background="@drawable/spinner_background_dark"
+        android:divider="@null"
+        android:popupBackground="@drawable/spinner_background_dark"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="@id/opponentName"
+        app:layout_constraintStart_toEndOf="@id/importance"
+        app:layout_constraintTop_toBottomOf="@id/tvDifficult"
+        tools:listitem="@layout/item_spinner_text" />
+
+
+
+    <TextView
+        android:id="@+id/tvStatistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/statistics"
+        android:textSize="@dimen/text_size_sixteen"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dificult" />
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:background="@color/light_ice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatistics" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/margin_intermediate"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="@id/opponentName"
+        app:layout_constraintEnd_toEndOf="@id/opponentName"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        app:layout_constraintBottom_toTopOf="@id/btnSaveMatch"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_smallest"
+                android:layout_marginTop="@dimen/margin_default"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_size_fourteen"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Some title here" />
+
+            <Spinner
+                android:id="@+id/resultSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinner_item_height"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:background="@drawable/spinner_background_dark"
+                android:divider="@null"
+                android:popupBackground="@drawable/spinner_background_dark"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toStartOf="@id/localSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvResult"
+                tools:listitem="@layout/item_spinner_text" />
+
+
+            <TextView
+                android:id="@+id/tvLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_smallest"
+                android:layout_marginTop="@dimen/margin_default"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_size_fourteen"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/localSpinner"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Some title here" />
+
+            <Spinner
+                android:id="@+id/localSpinner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spinner_item_height"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/spinner_background_dark"
+                android:divider="@null"
+                android:popupBackground="@drawable/spinner_background_dark"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/resultSpinner"
+                app:layout_constraintTop_toBottomOf="@id/tvLocal"
+                tools:listitem="@layout/item_spinner_text" />
+
+
+            <com.vitorthemyth.components.CustomInputField
+                android:id="@+id/yellowAndRedCards"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/localSpinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.vitorthemyth.components.CustomInputField
+                android:id="@+id/foulsAndCorners"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/yellowAndRedCards"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.vitorthemyth.components.CustomInputField
+                android:id="@+id/shootsInOut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/foulsAndCorners"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.vitorthemyth.components.CustomInputField
+                android:id="@+id/goalsScoredAndSuffered"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/shootsInOut"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.vitorthemyth.components.CustomInputField
+                android:id="@+id/ballControlAndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/goalsScoredAndSuffered"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveMatch"
+        style="@style/CustomButtonDarkMode"
+        android:text="@string/save_match"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/calculate_the_odds"
+        android:textSize="@dimen/text_size_sixteen"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:src="@drawable/change_icon"
+        app:layout_constraintBottom_toBottomOf="@id/switchLayout"
+        app:layout_constraintEnd_toStartOf="@id/switchLayout"
+        app:layout_constraintTop_toTopOf="@id/switchLayout"
+        app:tint="@color/white_color" />
+
+    <include
+        android:id="@+id/switchLayout"
+        layout="@layout/custom_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvHeader"
+        app:layout_constraintEnd_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="@id/tvHeader" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_large"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        android:background="@color/light_ice"
+        />
+
+
+    <com.vitorthemyth.components.CustomInputField
+        android:id="@+id/valueAndOdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        />
+
+    <com.vitorthemyth.components.CustomInputField
+        android:id="@+id/probWinLoss"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valueAndOdd" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCalculateProb"
+        style="@style/CustomButton"
+        android:text="@string/calc_probs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/probWinLoss" />
+
+
+    <ImageView
+        android:id="@+id/loading_gif"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateProb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        android:visibility="gone"
+        tools:src="@drawable/loading_ball"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/statusLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:visibility="gone"
+        android:textStyle="bold"
+        tools:visibility="visible"
+        android:layout_marginTop="@dimen/margin_intermediate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculateProb" />
+
+    <TextView
+        android:id="@+id/statusLoadingPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusLoading" />
+
+
+    <TextView
+        android:id="@+id/tvResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/results"
+        android:textSize="@dimen/text_size_sixteen"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusLoadingPercent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_large"
+        app:layout_constraintTop_toBottomOf="@id/tvResults"
+        android:background="@color/light_ice"
+        />
+
+
+    <TextView
+        android:id="@+id/winProbLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Win prob:"
+        android:textColor="@color/white_color"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="@id/valueAndOdd"
+        app:layout_constraintTop_toBottomOf="@id/divider2"/>
+
+    <TextView
+        android:id="@+id/winProbValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2.33%"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_intermediate"
+        app:layout_constraintStart_toEndOf="@id/winProbLabel"
+        app:layout_constraintTop_toTopOf="@id/winProbLabel"
+        app:layout_constraintBottom_toBottomOf="@id/winProbLabel"/>
+
+
+    <TextView
+        android:id="@+id/loseProbLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Win prob:"
+        android:textColor="@color/white_color"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="@id/valueAndOdd"
+        app:layout_constraintTop_toBottomOf="@id/winProbLabel"/>
+
+    <TextView
+        android:id="@+id/loseProbValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2.33%"
+        android:textColor="@color/red_color"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_intermediate"
+        app:layout_constraintBottom_toBottomOf="@id/loseProbLabel"
+        app:layout_constraintStart_toEndOf="@id/loseProbLabel"
+        app:layout_constraintTop_toTopOf="@id/loseProbLabel"/>
+
+
+    <TextView
+        android:id="@+id/evLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Win prob:"
+        android:textColor="@color/white_color"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_default"
+        app:layout_constraintStart_toStartOf="@id/valueAndOdd"
+        app:layout_constraintTop_toBottomOf="@id/loseProbLabel"/>
+
+    <TextView
+        android:id="@+id/evValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2.33%"
+        android:textColor="@color/green_color"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_intermediate"
+        app:layout_constraintStart_toEndOf="@id/evLabel"
+        app:layout_constraintTop_toTopOf="@id/evLabel"
+        app:layout_constraintBottom_toBottomOf="@id/evLabel"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="winProbLabel,winProbValue,loseProbLabel,loseProbValue,evLabel,evValue,tvResults,divider2"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="statusLoadingPercent,statusLoading"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

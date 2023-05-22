@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:layout_marginTop="@dimen/margin_small"
+    android:background="@drawable/spinner_background_dark"
+    android:padding="@dimen/margin_small">
+
+    <ImageView
+        android:id="@+id/teamShield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:src="@drawable/team_shield"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/orange" />
+
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLength="25"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginStart="@dimen/margin_default"
+        android:textSize="@dimen/text_size_default"
+        app:layout_constraintStart_toEndOf="@id/teamShield"
+        app:layout_constraintBottom_toBottomOf="@id/teamShield"
+        app:layout_constraintTop_toTopOf="@id/teamShield"
+        tools:text="Corinthians Corinthians" />
+
+    <ImageView
+        android:id="@+id/ivField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:src="@drawable/soccer_field"
+        app:layout_constraintStart_toStartOf="@id/teamShield"
+        app:layout_constraintTop_toBottomOf="@id/teamShield"
+        app:tint="@color/green_color" />
+
+
+
+    <TextView
+        android:id="@+id/tvMatchesNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:textSize="@dimen/text_size_default"
+        app:layout_constraintBottom_toBottomOf="@id/ivField"
+        app:layout_constraintStart_toEndOf="@id/ivField"
+        app:layout_constraintTop_toTopOf="@id/ivField"
+        tools:text="3" />
+
+    <TextView
+        android:id="@+id/tvLastUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginEnd="@dimen/margin_intermediate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ivField"
+        app:layout_constraintTop_toTopOf="@id/ivField"
+        tools:text="Updated: 2023-03-11" />
+
+    <ImageView
+        android:id="@+id/ivExpand"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="@dimen/margin_intermediate"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_drop_down"
+        app:layout_constraintBottom_toBottomOf="@id/teamShield"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/teamShield"
+        app:tint="@color/orange" />
+
+    <TextView
+        android:id="@+id/addMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_default"
+        android:background="@drawable/bg_input"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_fourteen"
+        app:drawableStartCompat="@drawable/add_match_icon"
+        app:drawableTint="@color/blue"
+        app:layout_constraintStart_toStartOf="@id/ivField"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        tools:text="Add match" />
+
+    <TextView
+        android:id="@+id/deleteTeam"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_default"
+        android:background="@drawable/bg_input"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/text_size_fourteen"
+        app:drawableStartCompat="@drawable/delete_icon"
+        app:drawableTint="@color/blue"
+        app:layout_constraintStart_toEndOf="@id/addMatch"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        tools:text="Add match" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="@color/light_ice"
+        app:layout_constraintTop_toBottomOf="@id/addMatch" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMatches"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_match_list" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="divider,rvMatches,addMatch,deleteTeam,divider2"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:background="@color/light_ice"
+        app:layout_constraintTop_toBottomOf="@id/ivField"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

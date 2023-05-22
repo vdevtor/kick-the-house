@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.KickTheHouse" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <!-- Set cursor color -->
+        <item name="android:textColor">@color/white_color</item>
+        <!-- Set icon color -->
+        <item name="android:textColorSecondary">@color/light_gray</item>
+
+        <item name="android:windowBackground">@color/soft_black</item>
+
+
+
+        <item name="fontFamily">@font/opensans</item>
+    </style>
+</resources>
+
+

@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">KickTheHouse</string>
+    <string name="calculate_the_odds">Calculate the Odds</string>
+    <string name="select_team">Select the first team</string>
+    <string name="select_team_alternative">Select the second team</string>
+    <string name="select_option">Select a option</string>
+    <string name="empty_list">add a team on the next tab</string>
+    <string name="calc_probs">Calculate odds</string>
+    <string name="add_new_team">Add New Team</string>
+    <string name="team_list">Team List</string>
+    <string name="delete_team">Delete Team</string>
+    <string name="statistics">Statistics</string>
+    <string name="team_name">Team Name:</string>
+    <string name="opponent_team_name">Opponent Team Name:</string>
+    <string name="add_match">Add match</string>
+    <string name="error_generic">It was not possible to calculate the probabilities</string>
+    <string name="save_team">Save Team</string>
+    <string name="save_match">Save Match</string>
+    <string name="match_add_reason">To calculate the odds, please provide up to 5 of this team\'s most recent matches.</string>
+    <string name="select_a_difficult">Select the Difficult</string>
+    <string name="select_importance">Select the Importance</string>
+    <string name="select_local">Select the Local</string>
+    <string name="select_result">Select the Result</string>
+    <string name="num_yellow_cards">Num. Yellow Cards</string>
+    <string name="num_red_cards">Num. Red Cards</string>
+    <string name="num_fouls">Num. Fouls</string>
+    <string name="num_corners">Num. Corners</string>
+    <string name="num_shoots_in">Num. Shoots in Target</string>
+    <string name="num_shoots_out">Num. Shoots out Target</string>
+    <string name="num_goals_Scored">Num. Goals Scored</string>
+    <string name="num_goals_suffered">Num. Goals Suffered</string>
+    <string name="ball_control">% Ball Possession</string>
+    <string name="position">Current Position</string>
+    <string name="date">Select a Date</string>
+    <string name="ok_btn" translatable="false">OK</string>
+    <string name="cancel_btn" translatable="false">Cancel</string>
+    <string name="txt_attention">Attention</string>
+    <string name="successfully_save">Team Successfully Added</string>
+    <string name="missing_data">Please, fill out the empty fields</string>
+    <string name="failed_save">It was not possible to save the team</string>
+    <string name="empty_fields">Please, fulfill all the fields </string>
+    <string name="main_team_name">Please, Insert the team name before proceeding</string>
+    <string name="matches_limit">You Reached the Maximum Number of Matches</string>
+
+    <!--enums of options-->
+    <string name="importance_irrelevant">Irrelevant</string>
+    <string name="importance_normal">Normal</string>
+    <string name="importance_important">Important</string>
+    <string name="importance_very_important">Very Important</string>
+
+    <string name="difficult_irrelevant">Very Easy</string>
+    <string name="difficult_normal">Normal</string>
+    <string name="difficult_difficult">Difficult</string>
+    <string name="difficult_very_difficult">Very Difficult</string>
+
+    <string name="result_win">Win</string>
+    <string name="result_draw">Draw</string>
+    <string name="result_lose">Lose</string>
+
+    <string name="local_home">Home</string>
+    <string name="local_away">Away</string>
+    <string name="loading">Loading..</string>
+    <string name="completed_txt">Completed!</string>
+    <string name="compare_data">Comparing Teams..</string>
+    <string name="analyze_bet">Analyzing Bet..</string>
+    <string name="last_update"><![CDATA[<b>Updated:</b> %1s]]></string>
+
+
+    <string name="desired_value">Desired Value</string>
+    <string name="house_odd">House Odds</string>
+
+    <string name="win_prob">Win prob:</string>
+    <string name="lose_prob">Lose prob:</string>
+    <string name="ev_prob">Expected Value (EV):</string>
+    <string name="results">Results</string>
+
+    <string name="odd_hint">E.g: 1.70 – 171.0</string>
+    <string name="prob_percent_hint">E.g: 56</string>
+    <string name="button_manual" translatable="false">Manual</string>
+    <string name="button_auto" translatable="false">Auto</string>
+
+</resources>

@@ -1,0 +1,97 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript{
+    ext.dagger_hilt_version = "2.43.2"
+    ext.kotlin_version = '1.8.0'
+    ext.nav_version = "2.5.3"
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_hilt_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+    id 'com.android.library' version '7.4.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext{
+    // Engage App Versions
+    major_version = 0
+    minor_version = 1
+    patch_version = 0
+    version_classifier = null
+    is_snapshot = false
+
+    // Android versions
+    buildtools_version = "30.0.3"
+    min_sdk_version = 26
+    target_sdk_version = 33
+    compile_sdk_version = 33
+
+    //dependencies
+    core_version ="1.10.1"
+    app_compat_Version = "1.6.1"
+    material_version = "1.9.0"
+    constraint_Version = "2.1.4"
+    room_version = "2.5.1"
+    dagger_hilt_version = "2.46"
+    mockito_version = "3.12.4"
+    gson_version = "2.9.0"
+    fragment_version = "1.5.7"
+    glide_version = "4.14.2"
+    splash_version = "1.0.1"
+
+
+    //test
+    junit_version = "4.13.2"
+    junit_android_version = "1.1.5"
+    espresso_version = "3.5.1"
+    test_rules_version = "1.5.0"
+    coroutine_test_version = "1.6.4"
+    test_core = "1.5.0"
+    task_execution = "2.2.0"
+}
+
+
+/**
+ * Builds the version code referring to the Minimum Android SDK, Major, Minor and Patch versions
+ *
+ * @return an Integer representing the application's version code
+ */
+Integer buildVersionCode() {
+    return ext.min_sdk_version * 10000000 +
+            ext.major_version * 10000 +
+            ext.minor_version * 100 +
+            ext.patch_version
+}
+
+/**
+ * Builds the version name that will be shown to the user.
+ * It concatenates Major, Minor and Patch versions.
+ * It also check if the current version is using any classifier (Alpha, Beta, RC and so on),
+ * to be added as suffix or even, if it is not a snapshot version, that in this case the suffix
+ * will be "-SNAPSHOT"
+ *
+ * @return a String representing the application's version name that will be shown to the user
+ */
+String buildVersionName() {
+    String versionName = "${ext.major_version}.${ext.minor_version}.${ext.patch_version}"
+    if (ext.version_classifier == null && ext.is_snapshot) {
+        ext.version_classifier = "SNAPSHOT"
+    }
+
+    if (ext.version_classifier != null) {
+        versionName += "-" + ext.version_classifier
+    }
+
+    return versionName
+}

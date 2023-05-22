@@ -1,0 +1,20 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spinner_item_height"
+    android:paddingLeft="@dimen/margin_medium"
+    android:paddingRight="@dimen/margin_medium">
+
+    <TextView
+        android:id="@+id/tvOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_default"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white_color"
+        android:textSize="18sp"
+        tools:text="United Kingdom"/>
+
+</RelativeLayout>

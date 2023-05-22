@@ -1,0 +1,13 @@
+<TextView
+    android:id="@+id/tvHeader"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:textStyle="bold"
+    android:textSize="16sp"
+    tools:text="Select a option"
+    android:textColor="@color/white_color"
+    android:layout_height="@dimen/spinner_item_height"
+    android:paddingLeft="@dimen/margin_intermediate"
+    android:paddingTop="@dimen/margin_default"
+    android:paddingRight="@dimen/margin_medium"/>

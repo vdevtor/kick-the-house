@@ -1,0 +1,34 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spinner_item_height"
+    android:paddingLeft="@dimen/margin_medium"
+    android:paddingRight="@dimen/margin_medium">
+
+
+    <TextView
+        android:id="@+id/tvOption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:layout_toLeftOf="@id/arrow"
+        android:layout_alignParentStart="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="18sp"
+        tools:text="Very Difficult"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arrow_drop_down"
+        app:tint="@color/orange" />
+</RelativeLayout>

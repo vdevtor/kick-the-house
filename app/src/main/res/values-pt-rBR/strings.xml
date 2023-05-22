@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KickTheHouse</string>
+    <string name="calculate_the_odds">Calcule as Probabilidades</string>
+    <string name="select_team">Selecione o primeiro time</string>
+    <string name="select_team_alternative">Selecione o segundo time</string>
+    <string name="select_option">Selecione uma opção</string>
+    <string name="empty_list">adicione um time na próxima aba</string>
+    <string name="calc_probs">Calcular odds</string>
+    <string name="add_new_team">Adicionar Novo Time</string>
+    <string name="team_list">Lista de Times</string>
+    <string name="delete_team">Deletar Time</string>
+    <string name="statistics">Estatisticas</string>
+    <string name="team_name">Nome do Time:</string>
+    <string name="opponent_team_name">Nome do Time Adversário:</string>
+    <string name="add_match">Adicionar Partida</string>
+    <string name="error_generic">Não foi possível calcular as probabilidades</string>
+    <string name="save_team">Salvar Time</string>
+    <string name="match_add_reason">Adicione até 5 das últimas partidas deste time como parâmetro para calcular as probabilidades.</string>
+    <string name="select_a_difficult">Selecione a Dificuldade</string>
+    <string name="select_importance">Selecione a Importância</string>
+    <string name="select_local">Selecione o Local</string>
+    <string name="select_result">Selecione o Resultado</string>
+
+
+    <string name="importance_irrelevant">Irrelevante</string>
+    <string name="importance_normal">Normal</string>
+    <string name="importance_important">Importante</string>
+    <string name="importance_very_important">Muito Importante</string>
+
+
+    <string name="difficult_irrelevant">Muito Facíl</string>
+    <string name="difficult_normal">Normal</string>
+    <string name="difficult_difficult">Difícil</string>
+    <string name="difficult_very_difficult">Muito Difícil</string>
+
+    <string name="result_win">Vitória</string>
+    <string name="result_draw">Empate</string>
+    <string name="result_lose">Derrota</string>
+
+    <string name="num_yellow_cards">Num. Cartões Amarelos</string>
+    <string name="num_red_cards">Num. Cartões Vermelhos</string>
+
+    <string name="num_fouls">Num. Faltas</string>
+    <string name="num_corners">Num. Escanteios</string>
+
+    <string name="num_shoots_in">Num. Chutes No Gol</string>
+    <string name="num_shoots_out">Num. Chutes Fora do Gol</string>
+
+    <string name="num_goals_Scored">Num. Goals Marcados</string>
+    <string name="num_goals_suffered">Num. Goals Sofridos</string>
+
+    <string name="ball_control">% Posse de Bola</string>
+    <string name="position">Posição Atual</string>
+    <string name="date">Selecione a Data</string>
+    <string name="save_match">Salvar Partida</string>
+
+    <string name="txt_attention">Atenção</string>
+    <string name="empty_fields">Por favor, preencha todos os campos </string>
+    <string name="main_team_name">Por favor, Insira o nome do time antes de proseguir</string>
+    <string name="matches_limit">You Atingiu o número maximo de partidas</string>
+
+    <string name="successfully_save">Time foi adicionado com successo</string>
+    <string name="missing_data">Por Favor, preencha todos os campos</string>
+    <string name="failed_save">Não foi possível adicionar o time</string>
+
+    <string name="local_home">Em Casa</string>
+    <string name="local_away">Fora de Casa</string>
+    <string name="loading">Carregando..</string>
+    <string name="completed_txt">Completo!</string>
+    <string name="compare_data">Comparando Times..</string>
+    <string name="analyze_bet">Analisando Aposta..</string>
+    <string name="last_update"><![CDATA[<b>Atualizado:</b> %1s]]></string>
+
+    <string name="desired_value">Valor Desejado</string>
+    <string name="house_odd">Odds da Casa</string>
+
+    <string name="win_prob">Vitória prob:</string>
+    <string name="lose_prob">Derrota prob:</string>
+    <string name="ev_prob">Valor Esperado (EV):</string>
+    <string name="results">Resultados</string>
+
+    <string name="odd_hint">Ex: 1.70 – 171.0</string>
+    <string name="prob_percent_hint">Ex: 56</string>
+
+
+</resources>

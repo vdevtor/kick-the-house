@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Light Theme-->
+    <color name="light_blue_gray">#F5F8FA </color>
+    <color name="fosco_light_blue">#669bbc</color>
+    <color name="black">#1A1A1A</color>
+    <color name="gray">#637381</color>
+    <color name="blue">#007BFF</color>
+    <color name="orange">#FFA500</color>
+
+
+    <!--Default-->
+    <color name="white_color">#FFFFFF</color>
+    <color name="transparent_color">#00780000</color>
+    <color name="red_color">#ED1909</color>
+    <color name="green_color">#30EA37</color>
+    <color name="dark_green_color">#099A0E</color>
+
+    <!--dark Theme-->
+    <color name="soft_black">#333533</color>
+    <color name="dark_black">#242423</color>
+    <color name="yellow_fosco">#f5cb5c</color>
+    <color name="light_ice">#e8eddf</color>
+    <color name="dark_ice">#cfdbd5</color>
+    <color name="light_gray">#A8B2C1</color>
+</resources>

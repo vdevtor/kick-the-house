@@ -1,0 +1,9 @@
+<ListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lvTeams"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@null"
+    tools:listitem="@layout/item_drop_down"
+    tools:listheader="@layout/item_spinner_header" />
