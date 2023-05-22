@@ -72,7 +72,7 @@ class ProbabilityViewModel @Inject constructor(
 
             val result = calculateEV.execute(
                 probability = doubleProbWin,
-                odds = odd,
+                odds = odd.trim(),
                 betValue = betValue,
                 loseProbability = doubleProbLoss
             )
@@ -109,7 +109,7 @@ class ProbabilityViewModel @Inject constructor(
                 calculateProbabilities.execute(team1, team2).also { probs ->
                     val result = calculateEV.execute(
                         probability = probs.first.first,
-                        odds = odd,
+                        odds = odd.trim(),
                         betValue = value,
                         loseProbability = probs.first.third
                     )

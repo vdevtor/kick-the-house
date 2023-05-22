@@ -35,7 +35,7 @@ class CalculateEvUseCaseImp(val repository: ProbabilitiesRepository) : Calculate
 
 
             val doubleOdd: Double = try {
-                numberFormat.parse(odds.replace(",","."))?.toDouble() ?: 0.0
+                numberFormat.parse(odds.replace(",","."))?.toDouble()?.div(100) ?: 0.0
             } catch (e: ParseException) {
                 0.0
             }
