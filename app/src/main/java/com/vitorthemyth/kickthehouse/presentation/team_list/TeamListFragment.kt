@@ -125,7 +125,7 @@ class TeamListFragment : Fragment() {
         }
 
         view.addMatch.setOnClickListener {
-            if (eachItem.ultimasPartidas.size >= 5) {
+            if (view.tvMatchesNum.text.toString().toInt() >= 5) {
                 Snackbar.make(
                     it, requireContext()
                         .getString(R.string.matches_limit), Snackbar.LENGTH_SHORT
