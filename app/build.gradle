@@ -134,4 +134,7 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test.ext:junit:$junit_android_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+
+    //in app update
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
 }
