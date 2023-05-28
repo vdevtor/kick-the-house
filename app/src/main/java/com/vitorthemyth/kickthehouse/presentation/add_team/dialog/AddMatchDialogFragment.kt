@@ -9,7 +9,6 @@ import android.text.InputType
 import android.util.Log
 import android.view.*
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.vitorthemyth.domain.models.Equipe
@@ -351,7 +350,6 @@ class AddMatchDialogFragment : DialogFragment() {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     if (p2 > 0) {
                         importance = list[p2 - 1].second
-                        Toast.makeText(requireContext(), "$importance", Toast.LENGTH_SHORT).show()
                     } else {
                         importance = 0
                     }
@@ -379,11 +377,10 @@ class AddMatchDialogFragment : DialogFragment() {
         binding.dificult.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    if (p2 > 0) {
-                        difficult = list[p2 - 1].second
-                        Toast.makeText(requireContext(), "$difficult", Toast.LENGTH_SHORT).show()
+                    difficult = if (p2 > 0) {
+                        list[p2 - 1].second
                     } else {
-                        difficult = 0
+                        0
                     }
                 }
 
@@ -477,11 +474,10 @@ class AddMatchDialogFragment : DialogFragment() {
         binding.resultSpinner.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    if (p2 > 0) {
-                        resultado = list[p2 - 1].second
-                        Toast.makeText(requireContext(), "$resultado", Toast.LENGTH_SHORT).show()
+                    resultado = if (p2 > 0) {
+                        list[p2 - 1].second
                     } else {
-                        resultado = 0
+                        0
                     }
                 }
 

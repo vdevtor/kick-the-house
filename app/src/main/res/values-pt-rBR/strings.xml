@@ -56,6 +56,10 @@
     <string name="save_match">Salvar Partida</string>
 
     <string name="txt_attention">Atenção</string>
+    <string name="txt_update_available">Atualização Disponível</string>
+    <string name="txt_update_available_msg">Mantenha seu app atualizado para desfrutar de uma melhor performane e novas funcionalidades</string>
+    <string name="txt_update">Atualizar</string>
+    <string name="txt_update_decline">Depois</string>
     <string name="empty_fields">Por favor, preencha todos os campos </string>
     <string name="main_team_name">Por favor, Insira o nome do time antes de proseguir</string>
     <string name="matches_limit">You Atingiu o número maximo de partidas</string>

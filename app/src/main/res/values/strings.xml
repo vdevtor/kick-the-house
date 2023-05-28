@@ -35,6 +35,10 @@
     <string name="ok_btn" translatable="false">OK</string>
     <string name="cancel_btn" translatable="false">Cancel</string>
     <string name="txt_attention">Attention</string>
+    <string name="txt_update_available">Update Available</string>
+    <string name="txt_update">Update</string>
+    <string name="txt_update_decline">Later</string>
+    <string name="txt_update_available_msg">Keep your app up to date to enjoy a better performance and new features</string>
     <string name="successfully_save">Team Successfully Added</string>
     <string name="missing_data">Please, fill out the empty fields</string>
     <string name="failed_save">It was not possible to save the team</string>

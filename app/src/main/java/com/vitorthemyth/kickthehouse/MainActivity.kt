@@ -11,6 +11,7 @@ import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.vitorthemyth.kickthehouse.databinding.ActivityMainBinding
+import com.vitorthemyth.kickthehouse.helper.version_checker.checkInAppUpdateNeeded
 import com.vitorthemyth.kickthehouse.presentation.add_team.AddNewTeamFragment
 import com.vitorthemyth.kickthehouse.presentation.probabilities.ManualProbabilityFragment
 import com.vitorthemyth.kickthehouse.presentation.probabilities.ProbabilityFragment
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         defineTheStarterFragment()
         setupBottomNavigation()
+        this.checkInAppUpdateNeeded()
     }
 
     private fun defineTheStarterFragment() {
