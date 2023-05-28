@@ -44,7 +44,7 @@ O Kick The House é licenciado sob a [MIT License](LICENSE.md).
 
 ---
 
-Esperamos que o Kick The House seja útil para calcular probabilidades futebolísticas e ajudar nas apostas esportivas. Se você tiver alguma dúvida, sugestão ou problema, sinta-se à vontade para abrir uma [issue](https://github.com/vdevtor/kick-the-house/issues) neste repositório. Obrigado por usar o Kick The House!
+Esperamos que o Kick The House seja útil para calcular probabilidades futebolísticas e ajudar nas apostas esportivas. Se você tiver alguma dúvida, sugestão ou problema, sinta-se à vontade para abrir uma [issue](https://github.com/vdevtor/kick-the-house/issues) neste repositório. Obrigado por usar o Kick The House!  [link para download](https://play.google.com/store/apps/details?id=com.vitorthemyth.kickthehouse)
 
 <img src="pic1.jpg" alt="Ilustração do app" width="220" height="450">   <img src="pic2.jpg" alt="Ilustração do app" width="220" height="450">. <img src="pic3.jpg" alt="Ilustração do app" width="220" height="450">
 
