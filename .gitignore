@@ -33,6 +33,10 @@ render.experimental.xml
 
 keystore/*
 
+#Releases
+app/stage
+app/prod
+
 # Google Services (e.g. APIs or Firebase)
 google-services.json
 
